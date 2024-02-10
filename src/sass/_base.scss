@@ -1,0 +1,32 @@
+$background: #0C0E16;
+$main: #141721;
+$secondary: #191C26;
+$white: #F5F5F5;
+$green: #15AF7C;
+$red: #e03131;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+
+    @media only screen and (max-width: 1470px){
+        font-size: 50%;
+    }
+
+    @media only screen and (max-width: 420px){
+        font-size: 45%;
+    }
+}
+
+body {
+    font-family: 'Syne', sans-serif;
+    background-color: $background;
+    overflow-x: hidden;
+}

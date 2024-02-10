@@ -1,0 +1,41 @@
+.main {
+    &__grid {
+        max-width: 145rem;
+        margin: 3rem auto;
+        background-color: $main;
+        padding: 2rem 4rem;
+        border-radius: 3rem;
+        display: grid;
+        grid-template-columns: 0.4fr 1.6fr;
+        column-gap: 3rem;
+
+        @media only screen and (max-width: 1180px){
+            max-width: 130rem;
+        }
+
+        @media only screen and (max-width: 1060px){
+            display: block;
+            max-width: 110rem;
+        }
+
+        @media only screen and (max-width: 910px){
+            max-width: 95rem;
+        }
+
+        @media only screen and (max-width: 780px){
+            padding: 0rem;
+        }
+
+        @media only screen and (max-width: 670px){
+            max-width: 70rem;
+        }
+
+        @media only screen and (max-width: 580px){
+            max-width: 60rem;
+        }
+
+        @media only screen and (max-width: 495px){
+            max-width: 50rem;
+        }
+    }
+}

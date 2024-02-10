@@ -1,0 +1,173 @@
+.bookmarks {
+    &__interior {
+        width: 100%;
+        min-height: 50rem;
+    }
+
+    &__grid {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(auto, 1fr);
+        column-gap: 3rem;
+        row-gap: 3rem;
+
+        @media only screen and (max-width: 1180px){
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @media only screen and (max-width: 670px){
+            grid-template-columns: 1fr;
+        }
+    }
+
+    &__item {
+        &:link,
+        &:visited {
+            color: $white;
+            text-decoration: none;
+        }
+
+        width: 100%;
+        // height: 17rem;
+        background-color: $main;
+        border-radius: 1rem;
+        display: flex;
+        align-items: center;
+        gap: 3rem;
+        padding: 2rem;
+
+        @media only screen and (max-width: 1180px){
+            gap: 6rem;
+        }
+
+        @media only screen and (max-width: 670px){
+            gap: 10rem;
+        }
+
+        &__img {
+            width: 13rem;
+            height: 13rem;
+
+            @media only screen and (max-width: 1180px){
+                width: 18rem;
+                height: 18rem;
+            }
+
+            @media only screen and (max-width: 780px){
+                width: 12rem;
+                height: 12rem;
+            }
+
+            @media only screen and (max-width: 670px){
+                width: 20rem;
+                height: 20rem;
+            }
+
+            @media only screen and (max-width: 495px){
+                width: 10rem;
+                height: 10rem;
+            }
+        }
+
+        &__span {
+            width: 12rem;
+            display: block;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+
+            @media only screen and (max-width: 1060px){
+                width: 15rem;
+            }
+
+            @media only screen and (max-width: 910px){
+                width: 12rem;
+            }
+
+            @media only screen and (max-width: 780px){
+                width: 18rem;
+            }
+
+            @media only screen and (max-width: 710px){
+                width: 10rem;
+            }
+
+            @media only screen and (max-width: 670px){
+                width: 25rem;
+            }
+
+            @media only screen and (max-width: 580px){
+                width: 15rem;
+            }
+
+            &--big {
+                font-size: 3.2rem;
+
+                @media only screen and (max-width: 1180px){
+                    font-size: 3.6rem;
+                }
+
+                @media only screen and (max-width: 780px){
+                    font-size: 3rem;
+                }
+
+                @media only screen and (max-width: 670px){
+                    font-size: 4rem;
+                }
+
+                @media only screen and (max-width: 495px){
+                    font-size: 2.8rem;
+                }
+            }
+
+            &--small {
+                font-size: 2rem;
+                margin-bottom: 1.2rem;
+
+                @media only screen and (max-width: 1180px){
+                    font-size: 2.6rem;
+                }
+
+                @media only screen and (max-width: 780px){
+                    font-size: 1.8rem;
+                }
+
+                @media only screen and (max-width: 670px){
+                    font-size: 3rem;
+                }
+
+                @media only screen and (max-width: 495px){
+                    font-size: 2rem;
+                }
+            }
+        }
+
+        &__btn {
+            border: none;
+            font-family: inherit;
+            font-size: 1.8rem;
+            padding: 0.4rem 0.8rem;
+            border-radius: 1rem;
+            background-color: $red;
+            color: $white;
+            cursor: pointer;
+
+            @media only screen and (max-width: 1180px){
+                font-size: 2.4rem;
+            }
+
+            @media only screen and (max-width: 780px){
+                font-size: 1.6rem;
+            }
+
+            @media only screen and (max-width: 670px){
+                font-size: 2.4rem;
+            }
+
+            @media only screen and (max-width: 495px){
+                font-size: 1.8rem;
+            }
+        }
+    }
+}

@@ -1,0 +1,154 @@
+.nav {
+    min-height: 50rem;
+    position: relative;
+    @media only screen and (max-width: 1060px){
+        position: fixed;
+        // transform: translateX(-200%);
+        top: 0;
+        left: 0;
+        z-index: 700;
+        width: 30%;
+        height: 100%;
+        padding: 2rem;
+        background-color: $secondary;
+        transform: translateX(-150%);
+        transition: all 0.5s;
+    }
+
+    @media only screen and (max-width: 910px){
+        width: 40%;
+    }
+
+    @media only screen and (max-width: 690px){
+        width: 55%;
+    }
+
+    @media only screen and (max-width: 580px){
+        width: 65%;
+    }
+
+    @media only screen and (max-width: 495px){
+        width: 100%;
+    }
+
+    &--active {
+        transform: translateX(0%);
+    }
+
+    &__logo {
+        &:link,
+        &:visited {
+            color: $white;
+            text-decoration: none;
+            text-transform: uppercase;
+        }
+
+        display: flex;
+        align-items: center;
+        gap: 0.4rem;
+        margin-bottom: 0.5rem;
+        
+        &__span {
+            font-size: 2.8rem;
+            font-weight: 700;
+
+            @media only screen and (max-width: 495px){
+                font-size: 3.4rem;
+            }
+        }
+
+        &__deco {
+            width: 18rem;
+            height: 3px;
+            background-color: $green;
+            margin-bottom: 3rem;
+
+            @media only screen and (max-width: 495px){
+                width: 26rem;
+            }
+        }
+    }
+
+    &__svg {
+        &--big {
+            width: 3rem;
+            height: 3rem;
+
+            @media only screen and (max-width: 495px){
+                width: 3.6rem;
+                height: 3.6rem;
+            }
+        }
+
+        &--small {
+            width: 2.4rem;
+            height: 2.4rem;
+
+            @media only screen and (max-width: 495px){
+                width: 2.8rem;
+                height: 2.8rem;
+            }
+        }
+    }
+
+    &__container__buttons {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+
+    &__btn {
+        display: flex;
+        align-items: center;
+        gap: 1.5rem;
+        padding: 0.6rem 1rem;
+        border-radius: 1rem;
+        border: none;
+        background-color: transparent;
+        transition: all 0.5s; 
+        color: $white;
+        font-family: inherit;
+        cursor: pointer;
+
+        &--active {
+            background-color: $green;
+        }
+
+        &__span {
+            font-size: 2.2rem;
+            font-weight: 500;
+
+            @media only screen and (max-width: 495px){
+                font-size: 2.6rem;
+            }
+        }
+    }
+
+    &__btn--close {
+        position: absolute; 
+        top: 2rem;
+        right: 2rem;
+        display: none;
+        border: none;
+        background-color: transparent;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+
+        @media only screen and (max-width: 1060px){
+            display: block;
+        }
+    }
+
+    &__svg--close {
+        width: 3rem;
+        height: 3rem;
+        display: none;
+
+        @media only screen and (max-width: 1060px){
+            display: block;
+        }
+    }
+}

@@ -1,0 +1,218 @@
+.home {
+    &__container {
+        width: 100%;
+        border-radius: 1rem;
+        padding: 2rem;
+        background-color: $main; 
+        color: $white;
+    }
+
+    &__container__coin {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 3rem;
+    }
+
+    &__img {
+        width: 20rem;
+        height: 20rem;
+
+        @media only screen and (max-width: 910px){
+            display: none;
+        }
+    }
+
+    &__data {
+        width: calc(100% - 25rem);
+
+        @media only screen and (max-width: 910px){
+            width: 100%;
+        }
+
+        &__container__title {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 3rem;
+        }
+
+        &__container__misc {
+            @media only screen and (max-width: 910px){
+                display: flex;
+                align-items: center;
+                gap: 2rem;     
+            }
+
+            @media only screen and (max-width: 580px){
+                // margin-bottom: 1.5rem;
+                width: 80%;
+            }
+        }
+
+        &__container__buttons {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        &__button {
+            border: none;
+            background-color: transparent;
+            cursor: pointer;
+
+        }
+
+        &__svg {
+            width: 3rem;
+            height: 3rem;
+
+            // @media only screen and (max-width: 580px){
+            //     width: 2.5rem;
+            //     height: 2.5rem; 
+            // }
+        }
+
+        &__title__img {
+            display: none;
+            @media only screen and (max-width: 910px){
+                display: block;
+                width: 5rem;
+                height: 5rem;
+            }
+        }
+
+        &__title {
+            font-size: 2.6rem;
+            font-weight: 500;
+        }
+
+        &__grid {
+            display: grid;
+            width: 100%;
+            grid-template-columns: repeat(3, 1fr);
+            justify-items: start;
+            column-gap: 5rem;
+            row-gap: 4rem;
+
+            @media only screen and (max-width: 910px){
+                // grid-template-columns: repeat(2, 1fr);
+                // column-gap: 4rem;
+                justify-content: space-between;
+            }
+
+            @media only screen and (max-width: 670px){
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            @media only screen and (max-width: 580px){
+                row-gap: 2rem;
+            }
+        }
+
+        &__cell {
+            &__span {
+                display: block;
+                
+                &--big {
+                    font-size: 2.2rem;
+                    font-weight: 700;
+
+                    @media only screen and (max-width: 580px){
+                        font-size: 1.8rem;
+                    }
+
+                    @media only screen and (max-width: 495px){
+                        font-size: 1.6rem;
+                        font-weight: 500;
+                    }
+                }
+
+                &--small {
+                    font-size: 2rem;
+                    color: $green;
+
+                    @media only screen and (max-width: 580px){
+                        font-size: 1.6rem;
+                    }
+                }
+            }
+        }
+    }
+
+    &__chart__form {
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+        margin-bottom: 2rem;
+
+        &__group {
+            display: flex;
+            align-items: center;
+            gap: 1.2rem;
+        }
+
+        &__label {
+            font-size: 2rem;
+            font-weight: 500;
+        }
+
+        &__select {
+            font-family: inherit;
+            padding: 0.6rem 1rem;
+            font-size: 1.8rem;
+            background-color: $white;
+            border: none;
+            border-radius: 1rem;
+        }
+
+        &__btn {
+            padding: 0.6rem 1.5rem;
+            font-size: 1.8rem;
+            font-family: inherit;
+            color: $white;
+            background-color: $green;
+            border: none;
+            border-radius: 1rem;
+            cursor: pointer;
+        }
+    }
+
+    &__chart__holder {
+        width: 100%;
+        height: 50rem;
+
+        @media only screen and (max-width: 1180px){
+            height: 42rem;
+        }
+
+        @media only screen and (max-width: 1060px){
+            height: 50rem;
+        }
+
+        @media only screen and (max-width: 910px){
+            height: 40rem;
+        }
+
+        @media only screen and (max-width: 780px){
+            height: 35rem;
+        }
+
+        @media only screen and (max-width: 670px){
+            height: 30rem;
+        }
+
+        @media only screen and (max-width: 580px){
+            height: 25rem;
+        }
+
+        @media only screen and (max-width: 495px){
+            height: 20rem;
+        }
+    }
+}
+
+canvas {
+    width: 100%;
+}
